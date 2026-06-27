@@ -1,0 +1,15 @@
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.ogg
+*.wav
+temp_*
+test_*
+data/
+.vscode/
+Thumbs.db
+desktop.ini
+.streamlit/
+.cache/
