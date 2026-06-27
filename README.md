@@ -1,7 +1,7 @@
 # 📚 AI Study Copilot
 
 I'm Reemaz Sahin, a CSE (AIML) student. I built this project because I always 
-wanted a tool that could actually help me study smarter — not just search through 
+wanted a tool that could actually help me study smarter not just search through 
 a PDF, but actually understand it, quiz me, and guide my thinking.
 So I built one.
 
@@ -14,47 +14,45 @@ I wanted a tool that could:
 - Help me think (not just memorize)
 - Let me take a proper timed exam
 
-So I spent 2 weeks building the AI Study Copilot from scratch.
-
 # What It Can Do 
 
- 💬 Chat with PDF - Ask anything from your PDF and get a clear answer 
- 📝 Quiz Generator - Creates MCQ questions automatically from your PDF 
- 🃏 Flashcards - Flip cards for quick last minute revision 
- 📋 Summarizer - Breaks down the whole PDF into key points 
- 🧠 Socratic Tutor - Asks YOU questions instead of giving answers directly
- 📊 Exam Simulator - Timed exam with scoring, grades and answer review 
- 🎤 Voice Input - Record your question and upload — no typing needed 
- 📂 Multi PDF - Upload multiple PDFs and ask across all of them 
+ 💬 Chat with PDF - Ask anything from your PDF and get a clear answer|
+ 📝 Quiz Generator - Creates MCQ questions automatically from your PDF| 
+ 🃏 Flashcards - Flip cards for quick last minute revision|
+ 📋 Summarizer - Breaks down the whole PDF into key points| 
+ 🧠 Socratic Tutor - Asks YOU questions instead of giving answers directly|
+ 📊 Exam Simulator - Timed exam with scoring, grades and answer review|
+ 🎤 Voice Input - Record your question and upload — no typing needed|
+ 📂 Multi PDF - Upload multiple PDFs and ask across all of them|
 
 # Tech Stack
 
- Streamlit - Quick to build, looks clean, easy to deploy 
- Groq + LLaMA 3.3 70B - Fast and free LLM API 
- FAISS - Stores PDF chunks as vectors for fast search 
- SentenceTransformers - Converts text to embeddings locally 
- LangChain - Handles text splitting and RAG pipeline 
- PyMuPDF - Extracts text from PDF files 
- FFmpeg + SpeechRecognition - Handles voice input transcription 
+ Streamlit - Quick to build, looks clean, easy to deploy|
+ Groq + LLaMA 3.3 70B - Fast and free LLM API|
+ FAISS - Stores PDF chunks as vectors for fast search| 
+ SentenceTransformers - Converts text to embeddings locally| 
+ LangChain - Handles text splitting and RAG pipeline|
+ PyMuPDF - Extracts text from PDF files|
+ FFmpeg + SpeechRecognition - Handles voice input transcription. 
 
 # How the RAG Pipeline Works
 
 Upload PDF
-↓
+->
 Extract text (PyMuPDF)
-↓
+->
 Split into chunks (LangChain)
-↓
+->
 Convert to embeddings (SentenceTransformers)
-↓
+->
 Store in FAISS vector database
-↓
+->
 User asks question
-↓
+->
 Find similar chunks (FAISS search)
-↓
+->
 Send chunks + question to Groq LLM
-↓
+->
 Show answer to user
 
 # Hardest Part
